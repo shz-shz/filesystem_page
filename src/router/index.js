@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 import Main from '../views/Main.vue'
-import Subscribe from '../views/Subscribe.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 
@@ -19,10 +18,6 @@ const routes = [
       {
         path: '/main',
         component: Main
-      },
-      {
-        path: '/subscribe',
-        component: Subscribe
       },
     ]
   },

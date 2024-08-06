@@ -9,7 +9,7 @@ import './assets/css/global.css'
 
 document.title = 'File System'
 
-axios.defaults.baseURL = 'http://locahost:8080/'
+axios.defaults.baseURL = 'http://101.35.224.44:8080/'
 
 axios.interceptors.request.use(config => {
   config.headers.token = window.sessionStorage.getItem('token')

@@ -15,7 +15,7 @@
     <div class="file_list">
       <div v-for="(item,index) in fileList" :key="index" class="file_card">
         <el-checkbox v-model="selectedFilenameForDelete" :label="item" class="thumbnail_checkbox">{{''}}</el-checkbox>
-        <el-image class="thumbnail" src="/file-logo.svg" fit="cover" @click="downloadFile(item)"></el-image>
+        <el-image class="thumbnail" src="/file-logo.svg" fit="cover" @click="downloadFile(item)" :title="item"></el-image>
         <div class="file_name">{{item}}</div>
       </div>
     </div>
@@ -41,9 +41,9 @@ export default {
       xr8S7TqWyBUAlmn49bc0ok5kwQCHG9ZKE9fTUEkd8cQ+C7hVp9aBBYmcr4kbLTRH
       CQIDAQAB
       -----END PUBLIC KEY-----`,
-      keyUrl: 'http://localhost:8080/setkey',
-      uploadUrl: 'http://localhost:8080/upload',
-      downloadUrl: 'http://localhost:8080/download',
+      keyUrl: '/setkey',
+      uploadUrl: '/upload',
+      downloadUrl: '/download',
       selectedFilenameForDelete: [],
       loading: false,
       role: ''
@@ -381,6 +381,8 @@ export default {
         margin-top: 10px;
         text-align: center;
         margin-bottom: 15px !important;
+        height: 60px;
+        overflow: hidden;
       }
     }
   }
